@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">   <!--Idioma-->
+<head>  
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 003</title>  <!--Titulo da pagina-->
+        <style>  /* Para usar CSS */
+            body{  
+            background-color: rgb(124, 204, 44);     /* para cor de fundo*/
+            color: black;  /*Para cor das letras*/
+            font: normal 20pt Arial;  /* para fonte, tamanho e fonte*/
+            
+            }
+
+        </style>
+</head>
+<body>
+ 
+
+<h1>Olá mundo!</h1>                  <!-- H1 para definir um titulo para o um texto-->
+<p>Já me livrei da maldição.</p>     <!--P para definir um paragrafo de um texto-->   
+
+    <script>
+        
+        var n1 = Number.parseFloat(window.prompt("Digite um número?"))      // O window.prompt vai ser string, então usar Number.parseInt para tranforma em Inteiro ou parseInt
+        var n2 = Number.parseFloat(window.prompt("Digite outro número?")) // para converter para real é Number.parseFloat ou so Number e ele ja reconhece real ou inteiro
+        var s = n1 + n2
+        window.alert(`A soma dos numeros ${n1} e ${n2} é ${s}`) // para ultilizar ${} (placeholder)(template string), ultilizar crase no lugar de aspas
+
+            /* Caso eu queira trasnforma de Numero para string uso, String(n) ou n.toString()*/
+
+    </script>
+    
+</body>
+</html>

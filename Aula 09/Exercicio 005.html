@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - DOCUMENT OBJECT MODEL</title>
+    <style>
+       body {background: rgb(14, 14, 29);
+        color: white;
+        font: arial 20pt;
+
+
+
+      }
+
+
+    </style>
+</head>
+<body>
+    <H1>Estudo de DOM</H1>  <!--O DOM so vai funcionar para rodar no navegador 
+                                 Eu posso usar o DOM dentro do JS, para acessar por MARCA, ID, NOME, CLASSE OU SELETOR,
+                                 basta seguir o caminho desejado atraves da arvore do DOM.
+    
+    -->
+
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong></p>
+
+    <div id="msg">Clique em mim</div> <br> //coloquei um id para o div
+
+      <script>
+        //window.document.write(window.navigator.appName)  //Mostra o nome do navegador atual, usando o DOM -> window.document .. etc
+        //window.document.write(window.document.URL)  //Mostra a URL usando o DOM
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1] /*getElementesByName seleciona uma TAG, no caso o paragrafo
+                                                                "p", para fazer o comando abaixo que é innerText,(replicou ou texto), 
+                                                                o numero[1] sigifica o paragra 2, pois comeca de 0 a contagem. */
+        window.document.write("Esta escrito assim:" + p1.innerText)
+        p1.style.color = 'red' //modificou o p1(segundo paragrafo) para vermelho
+        corpo.style.background = 'blue' // atraves do VAR corpo foi modificado o background para azul
+
+        //var d=document.getElementById('msg') /* Depois selecionei a div atraves do id e coloquei fundo cinza*/
+       // d.style.background = 'gray'
+       var d=window.document.querySelector('div#msg') /*usando o queryselector para fazer a mesma coisa 
+                                                         porem de maneira mais facil, se for um ID usa #, se for uma
+                                                         class usa-se o (.) */
+       d.style.background = 'red'
+
+
+
+      </script>
+    
+</body>
+</html>
